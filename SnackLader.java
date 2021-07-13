@@ -6,12 +6,14 @@ public class SnackLader {
 		Random rand1 = new Random();
 		int dice = rand1.nextInt(6)+1;
 		int Snack_Ladder = rand1.nextInt(2);
+		count++;
 		while(start!=100)
-		if(Snack_Ladder == 1 && ((start+dice) <=100)) {
-			start = start+dice;
-		}
-		else if (start > dice) {
-			start = start-1;
-		}
+			if(Snack_Ladder == 1 && ((start+dice) <=100)) {
+				start = start+dice;
+			}
+			else if (start > dice) {
+				start = start-1;
+				System.out.println(count+ " times the dice is rolled");
+			}
 	}
 }
